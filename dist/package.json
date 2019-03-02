@@ -1,0 +1,19 @@
+{
+  "name": "kht-ui",
+  "version": "0.0.1",
+  "description": "KHT React component library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KristofferTroncoso/kht-ui.git"
+  },
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "UI"
+  ],
+  "author": "KristofferTroncoso",
+  "license": "MIT"
+}
