@@ -25,6 +25,8 @@ storiesOf('Card', module)
   .add('sample project', () => (
     <Card 
       title="Sample Project"
-      tags={["mongodb", "sass", "express"]}
+      screenshot="https://www.kristoffertroncoso.com/screenshots/rheastagramscreenshot.jpeg"
+      description="A sample project. This sample screenshot is from Rheastagram."
+      tags={["react", "mongodb", "sass", "express"]}
     />
   ));
