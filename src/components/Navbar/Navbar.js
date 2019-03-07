@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 let StyledDiv = styled.div`
+  font-family: sans-serif;
   background: tomato;
   color: white;
   padding: 0 10px;
