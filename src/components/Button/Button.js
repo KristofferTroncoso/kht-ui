@@ -1,9 +1,9 @@
 import React from 'react';
 
-export function Button({text}) {
+export function Button({children}) {
   return (
     <button>
-      {text}
+      {children}
     </button>
   )
 }
