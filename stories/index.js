@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button, Navbar } from '../src';
+import { Button, Navbar, Card } from '../src';
 
 storiesOf('Button', module)
   .add('default', () => <Button />)
@@ -18,4 +18,13 @@ storiesOf('Navbar', module)
         My nav
       </nav>
     </Navbar>
-  ))
+  ));
+
+storiesOf('Card', module)
+  .add('default', () => <Card />)
+  .add('sample project', () => (
+    <Card 
+      title="Sample Project"
+      tags={["mongodb", "sass", "express"]}
+    />
+  ));
