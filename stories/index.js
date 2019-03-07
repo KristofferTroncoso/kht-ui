@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button, Navbar, Card } from '../src';
+import { Button, Navbar, Card, Form } from '../src';
 
 storiesOf('Button', module)
   .add('default', () => <Button />)
@@ -30,3 +30,8 @@ storiesOf('Card', module)
       tags={["react", "mongodb", "sass", "express"]}
     />
   ));
+
+  storiesOf('Form', module)
+  .add('default', () => <Form />)
+  .add('with text', () => <Form type="text" placeholder="PLACEHOLDER" />)
+ 
