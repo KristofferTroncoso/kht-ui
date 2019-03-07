@@ -1,14 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-let Yo = styled.h1`
+let StyledDiv = styled.div`
   background: tomato;
+  color: white;
+  padding: 0 10px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-export function Navbar() {
+export function Navbar({children="Default Navbar"}) {
   return (
-    <nav>
-      <Yo>This the navbar</Yo>
-    </nav>
+    <StyledDiv>
+      {children}
+    </StyledDiv>
   )
 }
