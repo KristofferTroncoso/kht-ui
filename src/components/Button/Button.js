@@ -3,10 +3,15 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   padding: 10px;
+  margin: 5px;
   border-radius: 5px;
   outline: 0;
   background: tomato;
   color: white;
+
+  :hover {
+    background: hotpink;
+  }
 `;
 
 export function Button({children="Default Button", ...rest}) {

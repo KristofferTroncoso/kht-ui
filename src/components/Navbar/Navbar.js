@@ -9,6 +9,7 @@ let StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
 `;
 
 export function Navbar({children="Default Navbar"}) {
