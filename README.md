@@ -1,5 +1,3 @@
 # KHT React UI Test
 
-```
-npm install kht-ui styled-components
-```
+```npm install kht-ui styled-components```
