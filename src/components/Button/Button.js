@@ -7,11 +7,13 @@ const StyledButton = styled.button`
   border-radius: 5px;
   border: 0;
   outline: 0;
-  background: tomato;
+  box-shadow: 2px 2px 6px gray;
+  background: linear-gradient(to right, #f2709c, #ff9472);
   color: white;
+  cursor: pointer;
 
   :hover {
-    background: hotpink;
+    filter: brightness(1.1);
   }
 `;
 

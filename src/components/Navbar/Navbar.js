@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 let StyledDiv = styled.div`
   font-family: sans-serif;
-  background: tomato;
+  background: linear-gradient(to right, #f2709c, #ff9472);
+  box-shadow: 2px 2px 8px gray;
   color: white;
   padding: 0 10px;
   height: 60px;
