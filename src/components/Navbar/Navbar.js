@@ -4,7 +4,7 @@ import styled from 'styled-components';
 let StyledDiv = styled.div`
   font-family: sans-serif;
   background: linear-gradient(to right, #f2709c, #ff9472);
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 1px 1px 4px #3a3a3a;
   color: white;
   padding: 0 10px;
   height: 60px;

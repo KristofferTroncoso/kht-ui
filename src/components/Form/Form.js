@@ -5,7 +5,7 @@ const StyledForm = styled.input`
   padding: 10px;
   margin: 5px;
   border: 0;
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 1px 1px 4px #3a3a3a;
   border-radius: 5px;
   background: linear-gradient(to right, #f2709c, #ff9472);
   color: white;

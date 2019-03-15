@@ -7,7 +7,7 @@ const StyledButton = styled.button`
   border-radius: 5px;
   border: 0;
   outline: 0;
-  box-shadow: 2px 2px 6px gray;
+  box-shadow: 1px 1px 4px #3a3a3a;
   background: linear-gradient(to right, #f2709c, #ff9472);
   color: white;
   cursor: pointer;
