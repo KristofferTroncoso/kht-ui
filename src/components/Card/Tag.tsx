@@ -2,19 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const tagPropTypes = {
-  tag: PropTypes.string.isRequired,
-  changeFilterTag: PropTypes.func.isRequired
-}
 
-const StyledButton = styled.button`
 
+const StyledButton: any = styled.button`
   box-sizing: border-box;
   opacity: 0.85;
   margin-bottom: 5px;
   filter: saturate(90%);
   display: inline-block;
-  background: ${props => props.tagColor};
+  background: ${(props: any) => props.tagColor};
   color: white;
   margin-right: 5px;
   padding: 2px 3px;
@@ -30,10 +26,13 @@ const StyledButton = styled.button`
   }
 `;
 
+export interface TagProps {
+  tag: string
+  changeFilterTag: Function
+}
 
-
-function Tag({ tag, changeFilterTag }) {
-  const tagColors = {
+function Tag({ tag, changeFilterTag }: TagProps) {
+  const tagColors: any = {
     react: '#5d7eaa',
     redux: '#a664db',
     nodejs: '#219641',
@@ -53,9 +52,9 @@ function Tag({ tag, changeFilterTag }) {
     PWA: '#fccb7b'
   }
 
-  let tagColor = tagColors[tag] || '#c4c4c4';
+  let tagColor: string = tagColors[tag] || '#c4c4c4';
 
-  function handleTagClick(e) {
+  function handleTagClick(e: any) {
     changeFilterTag(tag)
   }
 
@@ -71,6 +70,5 @@ function Tag({ tag, changeFilterTag }) {
   );
 }
 
-Tag.propTypes = tagPropTypes;
 
 export default Tag;

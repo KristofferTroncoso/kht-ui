@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import Tag from './Tag';
 import styled from 'styled-components';
 
-const propTypes = {
-	title: PropTypes.string,
-	sourceCodeUrl: PropTypes.string,
-	liveDemoUrl: PropTypes.string,
-	screenshot: PropTypes.string,
-	description: PropTypes.string,
-	tags: PropTypes.array,
-	changeFilterTag: PropTypes.func
+export interface CardProps {
+	title: string
+	sourceCodeUrl: string
+	liveDemoUrl: string
+	screenshot: string
+	description: string
+	tags: Array<string>
+	changeFilterTag: Function
 };
 
 const defaultProps = {
@@ -101,14 +101,13 @@ const StyledCard = styled.div`
 
 export function Card({
 	title,
-	url,
 	sourceCodeUrl,
 	liveDemoUrl,
 	screenshot,
 	description,
 	tags,
 	changeFilterTag
-}) {
+}: CardProps) {
 	return (
 		<StyledCard className="Card">
 			<div className="Card__top">
@@ -156,7 +155,6 @@ export function Card({
 	);
 }
 
-Card.propTypes = propTypes;
 Card.defaultProps = defaultProps;
 
 export default Card;
