@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -17,7 +17,8 @@ const StyledButton = styled.button`
   }
 `;
 
-export function Button({children="Default Button", ...rest}) {
+
+export const Button = ({children="Default Button", ...rest}) => {
   return (
     <StyledButton {...rest}>
       {children}

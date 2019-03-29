@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import Tag from './Tag';
 import styled from 'styled-components';
 
