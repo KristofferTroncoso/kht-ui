@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button, Navbar, Card, Form } from '../src';
+import { Button, Navbar, Card, Form, Code } from '../src';
 
 storiesOf('Button', module)
   .add('default', () => <Button />)
@@ -35,3 +35,7 @@ storiesOf('Card', module)
   .add('default', () => <Form />)
   .add('with text', () => <Form type="text" placeholder="PLACEHOLDER" />)
  
+
+storiesOf('Code', module)
+  .add('simple render', () => <Code render={`let i = 3;`} />)
+  .add('inline render', () => <Code render={`let i = 3;`} inline />)
