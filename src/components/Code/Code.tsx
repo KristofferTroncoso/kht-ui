@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import 'prismjs';
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 import 'prismjs/components/prism-jsx';
