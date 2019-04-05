@@ -5,22 +5,22 @@ import 'prismjs/components/prism-jsx';
 import styled from 'styled-components';
 
 const StyledPre = styled.pre`
-    color: black;
-    text-shadow: 0 1px white;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 1em;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-
-    tab-size: 4;
-
-    hyphens: none;
-
-
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  background: #f5f2f0;
 
   ::selection {
     text-shadow: none;
@@ -28,21 +28,8 @@ const StyledPre = styled.pre`
   }
 
   @media print {
-
       text-shadow: none;
-
   }
-
-  /* Code blocks */
-    padding: 1em;
-    margin: .5em 0;
-    overflow: auto;
-
-
-    background: #f5f2f0;
-
-
-
 
   .token.comment,
   .token.prolog,
