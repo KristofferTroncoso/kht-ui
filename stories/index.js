@@ -39,3 +39,17 @@ storiesOf('Card', module)
 storiesOf('Code', module)
   .add('simple render', () => <Code render={`let i = 3;`} />)
   .add('inline render', () => <Code render={`let i = 3;`} inline />)
+  .add('explicit jsx code', () => (
+    <Code 
+      lang="jsx"
+      render={`
+        function Card() {
+          return (
+            <div className="Card">
+              <h1>This is a Card</h1>
+            </div>
+          )
+        }
+      `}
+    />
+  ))
