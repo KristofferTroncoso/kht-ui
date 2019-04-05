@@ -1,5 +1,5 @@
 import * as React from "react";
-import 'prismjs';
+import * as Prism from 'prismjs';
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 import 'prismjs/components/prism-jsx';
 import styled from 'styled-components';
@@ -113,6 +113,11 @@ export interface InlineCodeProps {
 
 export function InlineCode({lang = "jsx", render, theme="light"}: InlineCodeProps) {
   let strLang = `language-${lang}`;
+
+  React.useEffect(() => {
+    Prism.highlightAll();
+  });
+
   return (
     <StyledCode className={strLang} theme={theme}>{render}</StyledCode>
   );

@@ -1,5 +1,5 @@
 import * as React from "react";
-import 'prismjs';
+import * as Prism from 'prismjs';
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 import 'prismjs/components/prism-jsx';
 import styled from 'styled-components';
@@ -124,6 +124,11 @@ export interface BlockCodeProps {
 
 export function BlockCode({lang = "jsx", render }: BlockCodeProps) {
   let strLang = `language-${lang}`;
+
+  React.useEffect(() => {
+    Prism.highlightAll();
+  });
+
   return (
     <StyledPre className={strLang}>
       <code>{render}</code>
