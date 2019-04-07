@@ -53,7 +53,7 @@ const StyledCode = styled.code`
   .token.constant,
   .token.symbol,
   .token.deleted {
-    color: ${props => props.theme === "light" ? '#905': '#ff60b8'};
+    color: ${props => props.theme === "light" ? '#905': '#c43181'};
   }
 
   .token.selector,
@@ -77,7 +77,7 @@ const StyledCode = styled.code`
   .token.atrule,
   .token.attr-value,
   .token.keyword {
-    color: #07a;
+    color: ${props => props.theme === "light" ? '#07a': '#00a0e5'};
   }
 
   .token.function,

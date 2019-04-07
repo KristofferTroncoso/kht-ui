@@ -1,6 +1,6 @@
 import React from "react";
-import {InlineCode} from './InlineCode';
-import {BlockCode} from './BlockCode';
+import { InlineCode } from "./InlineCode";
+import { BlockCode } from "./BlockCode";
 
 export interface CodeProps {
   render: string
@@ -10,15 +10,16 @@ export interface CodeProps {
 }
 
 /**
+ * @param {string} render string of code to render
  * @param {string} lang "jsx" | "css" | "javascript" - Default "jsx"
  * @param {boolean} inline boolean - Default false
  * @param {string} theme "light" | "dark" - Default "light"
- * @param {string} render string of code to render
  */
-export function Code({lang = "jsx", render, inline=false, theme="light"}: CodeProps) {
+export const Code: React.FC<CodeProps> = (props) => {
+  const { render, lang="jsx", inline=false, theme="light" } = props;
   return (
     inline
-    ? <InlineCode lang={lang} render={render} />
-    : <BlockCode lang={lang} render={render} />
+    ? <InlineCode lang={lang} render={render} theme={theme} />
+    : <BlockCode lang={lang} render={render} theme={theme} />
   );
 }

@@ -5,8 +5,9 @@ import 'prismjs/components/prism-jsx';
 import styled from 'styled-components';
 
 const StyledPre = styled.pre`
-  color: black;
-  text-shadow: 0 1px white;
+  color: ${props => props.theme === "light" ? 'black ': 'white'};
+	background: ${props => props.theme === "light" ? '#f5f2f0': '#333'};
+	text-shadow: ${props => props.theme === "light" ? '0 1px white': 'none'};
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   text-align: left;
@@ -20,7 +21,6 @@ const StyledPre = styled.pre`
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
-  background: #f5f2f0;
 
   ::selection {
     text-shadow: none;
@@ -53,7 +53,7 @@ const StyledPre = styled.pre`
   .token.constant,
   .token.symbol,
   .token.deleted {
-    color: #905;
+    color: ${props => props.theme === "light" ? '#905': '#c43181'};
   }
 
   .token.selector,
@@ -77,7 +77,7 @@ const StyledPre = styled.pre`
   .token.atrule,
   .token.attr-value,
   .token.keyword {
-    color: #07a;
+    color: ${props => props.theme === "light" ? '#07a': '#00a0e5'};
   }
 
   .token.function,
@@ -107,9 +107,10 @@ const StyledPre = styled.pre`
 export interface BlockCodeProps {
   render: string
   lang?: "jsx" | "css" | "javascript"
+  theme?: "light" | "dark"
 }
 
-export function BlockCode({lang = "jsx", render }: BlockCodeProps) {
+export function BlockCode({lang = "jsx", render, theme="light" }: BlockCodeProps) {
   let strLang = `language-${lang}`;
 
   useEffect(() => {
@@ -117,7 +118,7 @@ export function BlockCode({lang = "jsx", render }: BlockCodeProps) {
   });
 
   return (
-    <StyledPre className={strLang}>
+    <StyledPre className={strLang} theme={theme}>
       <code>{render}</code>
     </StyledPre>
   );

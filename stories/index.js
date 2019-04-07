@@ -31,7 +31,7 @@ storiesOf('Card', module)
     />
   ));
 
-  storiesOf('Form', module)
+storiesOf('Form', module)
   .add('default', () => <Form />)
   .add('with text', () => <Form type="text" placeholder="PLACEHOLDER" />)
  
@@ -39,9 +39,25 @@ storiesOf('Card', module)
 storiesOf('Code', module)
   .add('simple render', () => <Code render={`let i = 3;`} />)
   .add('inline render', () => <Code render={`let i = 3;`} inline />)
+  .add('dark inline render', () => <Code render={`let i = 3;`} theme="dark" inline />)
   .add('explicit jsx code', () => (
     <Code 
       lang="jsx"
+      render={`
+        function Card() {
+          return (
+            <div className="Card">
+              <h1>This is a Card</h1>
+            </div>
+          )
+        }
+      `}
+    />
+  ))
+  .add('dark explicit jsx code', () => (
+    <Code 
+      lang="jsx"
+      theme="dark"
       render={`
         function Card() {
           return (
