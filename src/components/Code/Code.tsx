@@ -1,6 +1,7 @@
 import React from "react";
 import { InlineCode } from "./InlineCode";
 import { BlockCode } from "./BlockCode";
+import PropTypes from 'prop-types';
 
 export interface CodeProps {
   render: string
@@ -8,6 +9,13 @@ export interface CodeProps {
   inline?: boolean
   theme?: "light" | "dark"
 }
+
+const propTypes: object = {
+  render: PropTypes.string.isRequired,
+  lang: PropTypes.oneOf(["jsx", "css", "javascript"]),
+  inline: PropTypes.bool,
+  theme: PropTypes.oneOf(["light", "dark"])
+};
 
 /**
  * @param {string} render string of code to render
@@ -23,3 +31,5 @@ export const Code: React.FC<CodeProps> = (props) => {
     : <BlockCode lang={lang} render={render} theme={theme} />
   );
 }
+
+Code.propTypes = propTypes;
