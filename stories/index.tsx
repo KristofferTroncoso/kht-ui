@@ -11,14 +11,6 @@ storiesOf('Button', module)
 storiesOf('Navbar', module)
   .add('default', () => <Navbar />)
   .add('with title', () => <Navbar>My Website</Navbar>)
-  .add('double element', () => (
-    <Navbar>
-      <h1>My Logo</h1>
-      <nav>
-        My nav
-      </nav>
-    </Navbar>
-  ));
 
 storiesOf('Card', module)
   .add('default', () => <Card />)

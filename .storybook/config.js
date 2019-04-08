@@ -21,7 +21,7 @@ addParameters({
 });
 
 function loadStories() {
-  require('../stories/index.js');
+  require('../stories/index.tsx');
   //load additional stories here
 }
 
