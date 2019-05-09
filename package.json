@@ -53,6 +53,7 @@
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 9000 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out",
     "build": "rimraf dist && tsc",
     "start": "npm run storybook",
     "deploy": "npm run build && npm publish"
