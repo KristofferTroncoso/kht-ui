@@ -1,5 +1,10 @@
-# KHT React UI Test
+# KHT React UI
+<p align="center">
+  <img src="./assets/khtuiscreenshot.JPG" width="520px">
+</p>
 
+
+# Installation
 ```npm install kht-ui```
 
 ## Notes:
