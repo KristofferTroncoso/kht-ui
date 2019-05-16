@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button, Navbar, Card, Form, Code } from '../src';
+import { Button, Navbar, ProjectCard, Form, Code } from '../src';
 
 storiesOf('Button', module)
   .add('default', () => <Button />)
@@ -14,10 +14,10 @@ storiesOf('Navbar', module)
   .add('default', () => <Navbar />)
   .add('with title', () => <Navbar>My Website</Navbar>)
 
-storiesOf('Card', module)
-  .add('default', () => <Card />)
+storiesOf('ProjectCard', module)
+  .add('default', () => <ProjectCard />)
   .add('sample project', () => (
-    <Card 
+    <ProjectCard 
       title="Sample Project"
       screenshot="https://www.kristoffertroncoso.com/screenshots/rheastagramscreenshot.jpeg"
       description="A sample project. This sample screenshot is from Rheastagram."

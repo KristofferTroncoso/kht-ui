@@ -98,7 +98,7 @@ const StyledCard = styled.div`
 	}
 `;
 
-export function Card({
+export function ProjectCard({
 	title,
 	sourceCodeUrl,
 	liveDemoUrl,
@@ -154,6 +154,6 @@ export function Card({
 	);
 }
 
-Card.defaultProps = defaultProps;
+ProjectCard.defaultProps = defaultProps;
 
-export default Card;
+export default ProjectCard;
