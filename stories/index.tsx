@@ -4,9 +4,11 @@ import { Button, Navbar, Card, Form, Code } from '../src';
 
 storiesOf('Button', module)
   .add('default', () => <Button />)
-  .add('with text', () => <Button>Hello Button</Button>)
+  .add('with text', () => <Button>Buy Now</Button>)
+  .add('danger', () => <Button variety="danger">Danger</Button>)
+  .add('dashed', () => <Button variety="dashed">Dashed</Button>)
   .add('disabled', () => <Button disabled>Disabled</Button>)
-  .add('with some emoji', () => <Button>😀 😎 👍 💯</Button>);   
+  .add('block', () => <Button block>😀 😎 👍 💯</Button>);
 
 storiesOf('Navbar', module)
   .add('default', () => <Navbar />)

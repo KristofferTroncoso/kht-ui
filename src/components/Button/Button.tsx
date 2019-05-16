@@ -1,27 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import StyledButton from "./StyledButton";
 
-const StyledButton = styled.button`
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 0;
-  outline: 0;
-  box-shadow: 1px 1px 4px #3a3a3a;
-  background: linear-gradient(to right, #f2709c, #ff9472);
-  color: white;
-  cursor: pointer;
+export interface Props {
+  variety?: "primary" | "danger" | "dashed";
+  block?: boolean;
+  disabled?: boolean;
+}
 
-  :hover {
-    filter: brightness(1.1);
-  }
-`;
-
-
-export const Button = ({children="Default Button", ...rest}) => {
+export const Button: React.FC<Props> = ({
+  children = "Button",
+  variety = "primary",
+  block = false,
+  disabled = false,
+  ...rest
+}) => {
   return (
-    <StyledButton {...rest}>
+    <StyledButton variety={variety} block={block} disabled={disabled} {...rest}>
       {children}
     </StyledButton>
-  )
-}
+  );
+};
+
+
+export default Button;
