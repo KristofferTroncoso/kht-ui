@@ -1,6 +1,6 @@
 # KHT React UI
 <p align="center">
-  <img src="./assets/kht-ui-screenshot.png" width="520px">
+  <img src="./assets/kht-ui-screenshot.png">
 </p>
 
 
